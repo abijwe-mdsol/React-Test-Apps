@@ -13,6 +13,9 @@ describe('Greet component', () => {
     render(<GreetSecond />);
     const testText = screen.getByText('Hello');
     expect(testText).toBeInTheDocument();
+
+    const txtBox = screen.getByRole('textbox');
+    expect(txtBox).toBeInTheDocument();
   })
 
   test('renders with a name', () => {
@@ -20,6 +23,13 @@ describe('Greet component', () => {
     const textElement = screen.getByText('Hello Akash');
     expect(textElement).toBeInTheDocument();
   })
+
+  // test('renders with a name', () => {
+  //   render(<GreetSecond />)
+  //   GreetSecond.text = false;
+  //   const textElement = screen.getByText('THis is a false');
+  //   expect(textElement).toBeInTheDocument();
+  // })
 
   // Nested Describe 
   describe('Nested Greet', () => {
