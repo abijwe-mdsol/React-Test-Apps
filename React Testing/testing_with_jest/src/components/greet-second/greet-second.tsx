@@ -23,7 +23,11 @@ export default function GreetSecond(props: any) {
       {
         abc()
       }
-      <input type="text" />
+      <label htmlFor="name">Name</label>
+      <input type="text" id="name" name="name" />
+
+      <label htmlFor="bio" >TextArea</label>
+      <textarea name="bio" id="bio" />
     </>
   )
 }

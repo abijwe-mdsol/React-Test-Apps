@@ -14,8 +14,15 @@ describe('Greet component', () => {
     const testText = screen.getByText('Hello');
     expect(testText).toBeInTheDocument();
 
-    const txtBox = screen.getByRole('textbox');
+    const txtBox = screen.getByRole('textbox', {
+      name: 'Name'
+    });
     expect(txtBox).toBeInTheDocument();
+
+    const txtArea = screen.getByRole('textbox', {
+      name: "TextArea"
+    });
+    expect(txtArea).toBeInTheDocument();
   })
 
   test('renders with a name', () => {
