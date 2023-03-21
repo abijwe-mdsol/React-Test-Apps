@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import GreetSecond from './components/greet-second/greet-second';
+import Users from './components/users/users';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         </a>
       </header>
       <GreetSecond name="Akash" />
+      <Users />
     </div>
   );
 }
